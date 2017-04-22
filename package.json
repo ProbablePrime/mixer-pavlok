@@ -1,0 +1,39 @@
+{
+  "name": "typescript-boilerplate",
+  "description": "A boilerplate to help me get started on typescript stuff quickly",
+  "author": "Richard Fox <richard.fox@ahref.co.uk>",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build:ts": "rimraf lib dist && tsc",
+    "build": "npm run build:ts",
+    "test": "mocha --compilers ts:ts-node/register \"src/**/*.spec.ts\"",
+    "prepublish": "npm run build",
+    "lint": "tslint -c tslint.json --project tsconfig.json \"src/**/*.ts\" \"test/**/*.ts\"",
+    "docs": "typedoc --out docs/ --mode file --excludeNotExported -tsconfig tsconfig.json --target ES6"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 6.9.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.39",
+    "@types/node": "^6.0.45",
+    "@types/sinon": "^1.16.34",
+    "@types/sinon-chai": "^2.7.27",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "rimraf": "^2.6.0",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0",
+    "ts-node": "^2.0.0",
+    "tslint": "^4.3.1",
+    "tslint-microsoft-contrib": "4.0.0",
+    "typedoc": "^0.5.7",
+    "typescript": "^2.1.6"
+  }
+}
