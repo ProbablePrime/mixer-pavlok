@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "declaration": true,
+        "strict": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "moduleResolution": "node",
@@ -9,7 +10,6 @@
         "noFallthroughCasesInSwitch": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "strictNullChecks": false,
         "suppressImplicitAnyIndexErrors": true,
         "module": "commonjs",
         "sourceMap": true,
