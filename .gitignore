@@ -49,3 +49,4 @@ jspm_packages
 /dist
 /config
 !/config/default.json
+!/config/controls.json
