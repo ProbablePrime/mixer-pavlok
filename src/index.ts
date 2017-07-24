@@ -8,7 +8,7 @@ const secretId = config.get<string>('pavlok.clientSecret');
 const token = config.get<string>('mixer.token');
 const version = config.get<number>('mixer.version');
 
-
+const manager = new InteractiveManager(token, version);
 
 pavlok.init(
     clientId,
@@ -18,14 +18,20 @@ pavlok.init(
     },
 );
 
-pavlok.login((result: any, code: any) => {
+pavlok.login((result: any) => {
     if (!result) {
         throw new Error('Auth failed');
     }
-    const manager = new InteractiveManager(token, version);
+
     manager.init().then(() => {
         registerEvents();
-    })
+    });
 });
 
-
+function registerEvents() {
+    manager.on('zap', (strength: number) => {
+        pavlok.zap({
+            intensity: strength,
+        });
+    });
+}

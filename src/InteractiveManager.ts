@@ -8,6 +8,8 @@ export class InteractiveManager extends EventEmitter {
     private interactive = new GameClient();
     constructor(private token: string, private id: number) {
         super();
+        // this.interactive.on('message', (err: any) => console.log('<<<', err));
+        // this.interactive.on('send', (err: any) => console.log('>>>', err));
     }
 
     public init(): Promise<void> {
@@ -18,6 +20,7 @@ export class InteractiveManager extends EventEmitter {
         .then(() => this.interactive.synchronizeState())
         .then(() => this.createControls())
         .then(controls => this.setupEvents(controls))
+        .then(() => this.interactive.ready(true))
         .then(() => { /* */});
     }
 
