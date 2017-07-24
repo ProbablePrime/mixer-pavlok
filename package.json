@@ -38,8 +38,10 @@
     "typescript": "^2.1.6"
   },
   "dependencies": {
+    "@types/ws": "^3.0.2",
     "beam-interactive-node2": "^2.3.0",
     "config": "^1.26.1",
-    "pavlok-beta-api-login": "^2.0.4"
+    "pavlok-beta-api-login": "^2.0.4",
+    "ws": "^3.0.0"
   }
 }
