@@ -1,0 +1,10 @@
+{
+    "pavlok": {
+        "clientID":"",
+        "clientSecret":""
+    },
+    "mixer": {
+        "token":"",
+        "version":0
+    }
+}
