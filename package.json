@@ -21,6 +21,7 @@
   "private": true,
   "devDependencies": {
     "@types/chai": "^3.4.34",
+    "@types/config": "0.0.32",
     "@types/mocha": "^2.2.39",
     "@types/node": "^6.0.45",
     "@types/sinon": "^1.16.34",
@@ -31,9 +32,14 @@
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
     "ts-node": "^2.0.0",
-    "tslint": "^4.3.1",
+    "tslint": "4.3.1",
     "tslint-microsoft-contrib": "4.0.0",
     "typedoc": "^0.5.7",
     "typescript": "^2.1.6"
+  },
+  "dependencies": {
+    "beam-interactive-node2": "^2.3.0",
+    "config": "^1.26.1",
+    "pavlok-beta-api-login": "^2.0.4"
   }
 }
