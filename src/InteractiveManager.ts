@@ -21,7 +21,8 @@ export class InteractiveManager extends EventEmitter {
         .then(() => this.createControls())
         .then(controls => this.setupEvents(controls))
         .then(() => this.interactive.ready(true))
-        .then(() => { /* */});
+        .then(() => { /* */})
+        .catch(err => console.log(err));
     }
 
     private createControls(): Promise<IControl[]> {
@@ -46,7 +47,8 @@ export class InteractiveManager extends EventEmitter {
                         this.emit(<string> control.meta.action.value, control.meta.strength.value);
                         console.log(`Charged ${participant.username} ${control.cost} sparks!`);
                         control.setCooldown(strength * 5000);
-                    });
+                    })
+                    .catch(err => console.log(err));
                 }
             });
         });
