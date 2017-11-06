@@ -1,10 +1,22 @@
 {
     "pavlok": {
-        "clientID":"",
-        "clientSecret":""
+        "mode": "ble",
+        "mac": "00:07:80:00:00:00",
+        "actionService": "75dbc164476f44ec889423fd0bb2f081",
+        "characteristics": {
+            "beep": "efd6fd9d681b4f19912159900f57a401",
+            "shock": "6e9d7a34ddc04b479df4fc45d2891827",
+            "vibrate": "7eca7033fc714a588775225e813a03fb",
+            "led": "0102a2827f714d5385d4c5f039491de5",
+            "batteryLevel": "00002a1900001000800000805f9b34fb",
+            "hardwareRevision": "00002a2700001000800000805f9b34fb",
+            "firmwareRevision": "00002a2600001000800000805f9b34fb"
+        },
+        "clientID": null,
+        "clientSecret": null
     },
     "mixer": {
-        "token":"",
-        "version":0
+        "token": "",
+        "version": 0
     }
 }
